@@ -1,7 +1,15 @@
-//Tempat start server
-const app = require('./app');
-const PORT = process.env.PORT || 3000;
+const express = require('express');
+const app = express();
+const port = 3000;
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+// Middleware
+app.use(express.json());
+
+// Routes
+const authRoutes = require('./routes/auth');
+app.use('/auth', authRoutes);
+
+// Server start
+app.listen(port, () => {
+  console.log(`Server running on http://localhost:${port}`);
 });
