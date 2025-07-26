@@ -10,7 +10,7 @@ app.listen(port, () => {
 
 // ✅ Izinkan CORS dari frontend kamu
 app.use(cors({
-  origin: 'http://dev.panel.bernitek.com', // ganti dengan frontend kamu
+  origin: 'https://dev.panel.bernitek.com', // ganti dengan frontend kamu
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
