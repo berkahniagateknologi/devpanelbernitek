@@ -17,7 +17,7 @@
 
   <script>
     document.getElementById('check-api').addEventListener('click', () => {
-      fetch('http://api.panel.bernitek.com/auth')
+      fetch('https://api.panel.bernitek.com/auth')
         .then(res => res.json())
         .then(data => {
           document.getElementById('result').textContent = JSON.stringify(data, null, 2);
